@@ -1,6 +1,8 @@
 DYNAMIC_MACRO_ENABLE = yes
 NKRO_ENABLE = yes
 
-# using an eager algorithm appears to have some bouncing that didn't happen
-# before i changed it, so we're back to defer now.
+# my keyboard appears to have two types of noise/bouncing:
+# - noisy release when holding a key
+# - noisy press right after releasing a key
+# unfortunately, this means eager algorithms don't work well :(
 DEBOUNCE_TYPE = sym_defer_pk
